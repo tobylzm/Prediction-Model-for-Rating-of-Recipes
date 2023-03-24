@@ -1,4 +1,5 @@
 # Prediction-Model-for-Rating-of-Recipes
+
 This is a project for DSC 80 at UCSD
 
 by Zhiming Liu (zhl109@ucsd.edu)
@@ -22,9 +23,9 @@ I use the K Nearest Neighbour Classifier as the model prediction. A k-Nearest Ne
 
 ## Final Model
 
-I added three new features n_ingredients and count vecterizer.
+I added three new features n_ingredients,n_steps and tags.
 n_steps and n_ingredients features represents the complexity of the recipes, so it could have affected cooker expreience, thus affected their rating
-I deal with the tags feature using count vectorizer. Too much features would slow down the model and take too long to predict. So I use max features=20 to limit the features amount. The tags build some first impression on the cooker. So it may affect their rating for the over all recipes
+I deal with the tags feature using count vectorizer. Too much features would slow down the model and take too long to predict. So I use max features=10 to limit the features amount. The tags build some first impression on the cooker. So it may affect their rating for the over all recipes.
 
 I still choose K Nearest Neighbours, since it is not bad when implementing the baseline model
 Then I use GridSearchCV, with cross validation of 5. After searching, I found the best parameter is .I use that parameter to implement
